@@ -1,19 +1,14 @@
 .qodo
 LICENSE
 .env
-.env*
-
+.env.*
 
 app.py_
 
-.github/workflows/de.yml_
-.github/workflows/tes.yml
-.github/workflows/coba.yml
 
 Dockerrun.aws.json
+Cloudformation/*
 
 modul2.yaml
 
 LICENSE
-
-lks-cf.yaml
