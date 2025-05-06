@@ -4,8 +4,6 @@ LICENSE
 .env.*
 
 app.py_
-Dockerfile
-dockerfile
 
 .github/workflows/deploy.yml_
 .github/workflows/de.yml_
@@ -18,3 +16,5 @@ Dockerrun.aws.json
 modul2.yaml
 
 LICENSE
+
+lks-cf.yaml
