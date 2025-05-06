@@ -1,7 +1,7 @@
 .qodo
 LICENSE
-
-ba.yml
+.env
+.env.*
 
 Dockerrun.aws.json
 
