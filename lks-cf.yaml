@@ -325,27 +325,27 @@ Resources:
               - TransitionInDays: 30
                 StorageClass: STANDARD_IA
 
-  BucketPolicy:
-    Type: AWS::S3::BucketPolicy
-    Properties:
-      Bucket: !Ref S3
-      PolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Action:
-              - 's3:*'
-            Effect: Allow
-            Resource: !Join
-              - ''
-              - - 'arn:aws:s3:::lks-dockerimage-ibrahim-25'
-                - !Ref S3
-                - /*
-            Principal: '*'
-            Condition:
-              StringLike:
-                'aws:Referer':
-                  - 'http://www.example.com/*'
-                  - 'http://example.net/*'
+BucketPolicy:
+  Type: AWS::S3::BucketPolicy
+  Properties:
+    Bucket: !Ref S3
+    PolicyDocument:
+      Version: 2012-10-17
+      Statement:
+        - Action:
+            - 's3:GetObject'
+          Effect: Allow
+          Resource: !Join
+            - ''
+            - - 'arn:aws:s3:::lks-dockerimage-ibrahim-25'
+              - !Ref S3
+              - /*
+          Principal: '*'
+          Condition:
+            StringLike:
+              'aws:Referer':
+                - 'http://www.example.com/*'
+                - 'http://example.net/*'
 
   EFS:
     Type: AWS::EFS::FileSystem
